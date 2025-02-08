@@ -4,38 +4,22 @@
   "description": "RTCM 3.3 decoder/encoder",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/node-ntrip/rtcm.git"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest"
-  },
-  "files": [
-    "build"
-  ],
-  "engines": {
-    "node": ">=11.0.0"
-  },
-  "keywords": [
-    "rtcm",
-    "decoder",
-    "encoder",
-    "parser"
-  ],
-  "author": "Nebojša Cvetković <nebkat@gmail.com> (http://cvetkovic.ie)",
-  "license": "GPL-3.0-or-later",
-  "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "@types/node": "^16.3.3",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3",
-    "typescript": "^4.3.5"
-  },
-  "dependencies": {
-    "bit-buffer-ts": "^0.8.1",
-    "reflect-metadata": "^0.1.13"
-  },
-  "readmeFilename": "README.md"
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/node-ntrip/rtcm.git"
+	},
+	"author": "Nebojša Cvetković <nebkat@gmail.com> (http://cvetkovic.ie)",
+    "license": "GPL-3.0-or-later",
+	"devDependencies": {
+		"@types/jest": "^29.5.14",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"bit-buffer-ts": "^0.8.1",
+		"reflect-metadata": "^0.2.2"
+	}
 }

@@ -1,5 +1,6 @@
 # RTCM 3 Decoder/Encoder
 Decoder/encoder for all RTCM 3 message types up to RTCM 3.3 Amendment 1 (c10403.3).
+Make it work on Ionic Capacitor.
 
 ## Installing
 

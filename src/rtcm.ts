@@ -463,7 +463,7 @@ export namespace RtcmTransport {
      * @returns Decoded RTCM message and number of bytes read from buffer
      * @throws {DecodeException} If buffer does not contain a valid RTCM message
      */
-    export function decode(buffer: Uint8Array): [RtcmMessage, number] {
+    export function decode(buffer: Uint8Array): [RtcmMessage, number, RtcmMessageType] {
         const preamble = buffer[0];
         if (preamble != SYNC_CHAR)
             throw new DecodeException(`Invalid preamble (expected ${SYNC_CHAR.toString(16)}, got ${preamble.toString(16)})`);
@@ -503,7 +503,7 @@ export namespace RtcmTransport {
                 throw new DecodeException(`Corrupt ${resultType!.name}[${messageType}] detected, not long enough to contain necessary data (${messageLength} sent, ${finalByteIndex} required)`);
         }
 
-        return [message, messageLength + HEADER_SIZE + CRC_SIZE];
+        return [message, messageLength + HEADER_SIZE + CRC_SIZE, messageType];
     }
 
     /**
